@@ -151,3 +151,9 @@ body {
   font-weight: bold;
 }
 
+.content a {
+  color: #f7c411;
+  font-weight: bold;
+  font-style: italic;
+}
+
