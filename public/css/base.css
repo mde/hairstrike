@@ -157,3 +157,6 @@ body {
   font-style: italic;
 }
 
+li {
+  margin-bottom: 8px;
+}

@@ -21,5 +21,6 @@ var router = new geddy.RegExpRouter();
 
 router.get('/').to('Main.index');
 router.get('/band').to('Main.band');
+router.get('/setlist').to('Main.setlist');
 
 exports.router = router;

@@ -30,6 +30,13 @@ var Main = function () {
     , template: 'app/views/main/band'
     });
   };
+
+  this.setlist = function (req, resp, params) {
+    this.respond(params, {
+      format: 'html'
+    , template: 'app/views/main/setlist'
+    });
+  };
 };
 
 exports.Main = Main;
