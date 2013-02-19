@@ -140,10 +140,13 @@ body {
   height: 400px;
   margin: 10px 20px;
   float: left;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
 }
 
 .band-bio-entry div {
-  margin: 20px 20px 0 320px;
+  margin: 20px 20px 0 20px;
 }
 
 .band-bio-subtitle {
