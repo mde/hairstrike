@@ -163,3 +163,26 @@ body {
 li {
   margin-bottom: 8px;
 }
+
+.band-gallery {
+  width: 100%;
+  overflow: auto;
+}
+
+.band-gallery img {
+  width: 150px;
+  height: 200px;
+  margin: 10px 10px 0 0;
+  float: left;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.band-gallery a {
+  display: block;
+  float: left;
+}
+
+
+

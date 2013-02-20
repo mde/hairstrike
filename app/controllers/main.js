@@ -37,6 +37,13 @@ var Main = function () {
     , template: 'app/views/main/setlist'
     });
   };
+
+  this.music = function (req, resp, params) {
+    this.respond(params, {
+      format: 'html'
+    , template: 'app/views/main/music'
+    });
+  };
 };
 
 exports.Main = Main;
