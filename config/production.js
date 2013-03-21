@@ -19,7 +19,7 @@
 var config = {
   detailedErrors: false
 , hostname: null
-, port: 4000
+, port: 4002
 , model: {
     defaultAdapter: 'mongo'
   }
