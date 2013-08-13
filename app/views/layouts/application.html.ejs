@@ -1,8 +1,31 @@
+<%
+var url = request.url
+  , navs = {
+      '/': 'Home'
+    , '/band': 'The Band'
+    , '/setlist': 'Set List'
+    , '/music': 'Music'
+    }
+  , siteName = 'Hairstrike: 80s hair metal band'
+  , title = siteName
+  , description = "Hairstrike is an 80s hair metal band (i.e., tribute band, cover band) playing in the San Francisco Bay Area. Performing songs by Poison, Scorpions, Twisted Sister, Bon Jovi, Def Leppard, Dokken, Journey, Poison, Warrant, Ozzy Osbourne, Scorpions, Motley Crue, Poison, Kiss, Bon Jovi, Dokken, Motley Crue, Ratt, Skid Row, Guns N' Roses, Warrant, Ozzy, Kiss."
+
+if (url != '/') {
+  title += ' -- ' + navs[url];
+}
+-%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hairstrike: 80s hair metal band</title>
+    <title><%= title; %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title” content="<%= title; %>"/>
+    <meta property="og:type" content="band"/>
+    <meta property="og:url" content="http://hairstrike.com<%= url %>"/>
+    <meta property="og:image" content="http://hairstrike.com/img/hairstrike_logo2.png"/>
+    <meta property="og:site_name" content="<%= siteName; %>"/>
+    <meta property="og:description" content="<%- description %>"/>
+    <meta name="description" content="<%- description %>"/>
     <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
     <link href="/css/bootstrap.responsive.css" rel="stylesheet" type="text/css">
     <link href="/css/base.css" rel="stylesheet" type="text/css" />
@@ -20,18 +43,11 @@
       </a>
     </div>
     <ul class="nav">
+      <% for (var p in navs) { %>
       <li>
-        <a href="/">home</a>
+        <a href="<%= p %>"><%= navs[p].toLowerCase(); %></a>
       </li>
-      <li>
-        <a href="/band">the band</a>
-      </li>
-      <li>
-        <a href="/setlist">set list</a>
-      </li>
-      <li>
-        <a href="/music">music</a>
-      </li>
+      <% } %>
       <li>
         <a href="mailto:info@hairstrike.net">contact</a>
       </li>
