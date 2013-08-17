@@ -184,5 +184,12 @@ li {
   float: left;
 }
 
+.facebook-button {
+  text-align: center;
+  margin-top: 28px;
+}
 
-
+.facebook-button img {
+  background: #eee;
+  border-radius: 7px;
+}
