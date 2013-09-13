@@ -18,7 +18,7 @@
 
 var Main = function () {
   var self = this;
-  ['index', 'band', 'setlist', 'pics', 'music'].forEach(function (item) {
+  ['index', 'band', 'setlist', 'pics', 'music', 'contact'].forEach(function (item) {
     self[item] = function (req, resp, params) {
       self.respond(params, {
         format: 'html'

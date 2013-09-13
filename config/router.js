@@ -24,5 +24,6 @@ router.get('/band').to('Main.band');
 router.get('/setlist').to('Main.setlist');
 router.get('/pics').to('Main.pics');
 router.get('/music').to('Main.music');
+router.get('/contact').to('Main.contact');
 
 exports.router = router;

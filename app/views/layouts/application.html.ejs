@@ -6,6 +6,7 @@ var url = request.url
     , '/setlist': 'Set List'
     , '/pics': 'Pics'
     , '/music': 'Music'
+    , '/contact': 'contact'
     }
   , siteName = 'Hairstrike: 80s hair metal band'
   , title = siteName
@@ -49,9 +50,6 @@ if (url != '/') {
         <a href="<%= p %>"><%= navs[p].toLowerCase(); %></a>
       </li>
       <% } %>
-      <li>
-        <a href="mailto:info@hairstrike.net">contact</a>
-      </li>
     </ul>
 
     <div class="content container">
