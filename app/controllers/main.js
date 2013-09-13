@@ -17,33 +17,16 @@
 */
 
 var Main = function () {
-  this.index = function (req, resp, params) {
-    this.respond(params, {
-      format: 'html'
-    , template: 'app/views/main/index'
-    });
-  };
+  var self = this;
+  ['index', 'band', 'setlist', 'pics', 'music'].forEach(function (item) {
+    self[item] = function (req, resp, params) {
+      self.respond(params, {
+        format: 'html'
+      , template: 'app/views/main/' + item
+      });
+    };
+  });
 
-  this.band = function (req, resp, params) {
-    this.respond(params, {
-      format: 'html'
-    , template: 'app/views/main/band'
-    });
-  };
-
-  this.setlist = function (req, resp, params) {
-    this.respond(params, {
-      format: 'html'
-    , template: 'app/views/main/setlist'
-    });
-  };
-
-  this.music = function (req, resp, params) {
-    this.respond(params, {
-      format: 'html'
-    , template: 'app/views/main/music'
-    });
-  };
 };
 
 exports.Main = Main;

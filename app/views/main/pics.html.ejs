@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/bootstrap-image-gallery.css">
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/load-image.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap-image-gallery.js"></script>
+
+<!-- modal-gallery is the modal dialog used for the image gallery -->
+<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">&times;</a>
+        <h3 class="modal-title"></h3>
+    </div>
+    <div class="modal-body"><div class="modal-image"></div></div>
+    <div class="modal-footer">
+        <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
+        <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+        <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
+        <a class="btn modal-download" target="_blank"><i class="icon-download"></i> Download</a>
+    </div>
+</div>
+
+<h2>pics</h2>
+
+<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery"
+    class="modal-gallery-thumbs">
+    <%
+      for (var i = 1, ii = 7; i < ii; i++) {
+    %>
+      <a href="/img/hairstrike_band<%= i %>.jpg" title="hairstrike" data-gallery="gallery"
+          class="modal-gallery-anchor">
+        <img src="/img/hairstrike_band<%= i %>.jpg" alt=""/>
+      </a>
+    <%
+      }
+    %>
+</div>
+
+
