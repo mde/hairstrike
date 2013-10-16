@@ -235,3 +235,21 @@ li {
 
 .modal-gallery-anchor img {
 }
+
+.music-section {
+  text-align: center;
+  width: 100%;
+}
+
+.music-section .video-item {
+  width: 568px;
+  display :inline-block;
+  margin-bottom: 24px;
+}
+
+.music-section .video-caption {
+  text-align: left;
+}
+
+
+
