@@ -32,7 +32,6 @@ var Main = function () {
     , navArray = Object.keys(NAVS);
 
   this.navs = NAVS;
-  this.cacheResponse(navArray);
 
   navArray.forEach(function (item) {
     var action = item.replace('/', '');
