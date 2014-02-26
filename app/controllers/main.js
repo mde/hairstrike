@@ -16,16 +16,51 @@
  *
 */
 
+var NAVS = {
+      '/': 'Home'
+    , '/band': 'The Band'
+    , '/pics': 'Pics'
+    , '/music': 'Music'
+    , '/schedule': 'Schedule'
+    , '/setlist': 'Set List'
+    , '/contact': 'contact'
+    }
+  , EVENTS_URL = 'https://graph.facebook.com/539862106054222/events?fields=id,name,description,picture&access_token=2418803385|lvofYVRMdQf9Vz7cj-WIWipWwqM';
+
 var Main = function () {
-  var self = this;
-  ['index', 'band', 'setlist', 'pics', 'music', 'contact'].forEach(function (item) {
-    self[item] = function (req, resp, params) {
+  var self = this
+    , navArray = Object.keys(NAVS);
+
+  this.navs = NAVS;
+  this.cacheResponse(navArray);
+
+  navArray.forEach(function (item) {
+    var action = item.replace('/', '');
+    action = action || 'index';
+
+    if (action == 'schedule') {
+      return;
+    }
+
+    self[action] = function (req, resp, params) {
       self.respond(params, {
         format: 'html'
-      , template: 'app/views/main/' + item
+      , template: 'app/views/main/' + action
       });
     };
   });
+
+  this.schedule = function (req, resp, params) {
+    var self = this;
+    geddy.request({url: EVENTS_URL, dataType: 'json'}, function (err, data) {
+      self.events = data.data;
+      self.events.reverse();
+      self.respond(params, {
+        format: 'html'
+      , template: 'app/views/main/schedule'
+      });
+    });
+  };
 
 };
 

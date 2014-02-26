@@ -21,6 +21,7 @@ var router = new geddy.RegExpRouter();
 
 router.get('/').to('Main.index');
 router.get('/band').to('Main.band');
+router.get('/schedule').to('Main.schedule');
 router.get('/setlist').to('Main.setlist');
 router.get('/pics').to('Main.pics');
 router.get('/music').to('Main.music');
