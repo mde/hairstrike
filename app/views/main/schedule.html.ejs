@@ -21,8 +21,7 @@
             </a>
           </div>
           <div style="font-weight: bold;">
-            <%# Strip the timzone offset off so we always display the Pacific time values %>
-            <%= geddy.date.strftime(geddy.date.parse(ev.start_time.split('+')[0] + 'Z'), '%B %e, %Y, at %l:%M %p'); %> (Pacific time)
+            <%= ev.start_time; %> (Pacific time)
           </div>
           <div>
             <%= ev.description %>

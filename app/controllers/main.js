@@ -54,6 +54,15 @@ var Main = function () {
     geddy.request({url: EVENTS_URL, dataType: 'json'}, function (err, data) {
       self.events = data.data;
       self.events.reverse();
+      self.events.forEach(function (ev) {
+        // 2014-03-22T22:00:00-0700
+        var s = ev.start_time
+          , dt;
+        // Strip TZ info to create a floating date
+        s = s.replace(/-\d+?$/, '');
+        dt = geddy.date.parse(s);
+        ev.start_time = geddy.date.strftime(dt, '%B %e, %Y, at %l:%M %p');
+      });
       self.respond(params, {
         format: 'html'
       , template: 'app/views/main/schedule'
