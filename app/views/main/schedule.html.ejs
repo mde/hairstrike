@@ -21,7 +21,7 @@
             </a>
           </div>
           <div style="font-weight: bold;">
-            <%= geddy.date.strftime(new Date(ev.start_time), '%B %e, %Y, at %l:%M %p'); %>
+            <%= geddy.date.strftime(geddy.date.parse(ev.start_time), '%B %e, %Y, at %l:%M %p'); %>
           </div>
           <div>
             <%= ev.description %>
