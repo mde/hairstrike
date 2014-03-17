@@ -1,38 +1,44 @@
+          <div class="row">
+            <div class="span7">
+              <h3>tour schedule</h2>
 
-<h2>schedule</h2>
+              <div style="padding: 20px;">
+                <%
+                  events.forEach(function (ev) {
+                %>
+                    <div style="padding-bottom: 18px; overflow: auto;">
+                      <div style="float: left; width: 128px;">
+                        <a href="https://facebook.com/events/<%= ev.id %>">
+                          <img src="<%= ev.picture.data.url
+                              .replace('50.50/p50x50', '128.128/p128x128')
+                              .replace('50.50', '128.128/p128x128')
+                              .replace(/_a\.jpg|_t\.jpg/, '_n.jpg'); %>" alt="<%= ev.name %>" style="width:128px;height:128px;"/>
+                        </a>
+                      </div>
+                      <div style="margin-left: 148px;">
+                        <div style="font-size: 18px; margin-bottom: 8px;">
+                          <a href="https://facebook.com/events/<%= ev.id %>">
+                            <%= ev.name %>
+                          </a>
+                        </div>
+                        <div style="font-weight: bold;">
+                          <%= ev.start_time; %> (Pacific time)
+                        </div>
+                        <div>
+                          <%= ev.description %>
+                        </div>
+                      </div>
 
-<div style="padding: 20px;">
-  <%
-    events.forEach(function (ev) {
-  %>
-      <div style="padding-bottom: 18px; overflow: auto;">
-        <div style="float: left; width: 128px;">
-          <a href="https://facebook.com/events/<%= ev.id %>">
-            <img src="<%= ev.picture.data.url
-                .replace('50.50/p50x50', '128.128/p128x128')
-                .replace('50.50', '128.128/p128x128')
-                .replace(/_a\.jpg|_t\.jpg/, '_n.jpg'); %>" alt="<%= ev.name %>" style="width:128px;height:128px;"/>
-          </a>
-        </div>
-        <div style="margin-left: 148px;">
-          <div style="font-size: 18px; margin-bottom: 8px;">
-            <a href="https://facebook.com/events/<%= ev.id %>">
-              <%= ev.name %>
-            </a>
+                    </div>
+
+                <%
+                  });
+                %>
+
+              </div>
+            </div>
+            <div class="span3">
+              <%- partial('right_sidebar', {quotes: quotes}); %>
+            </div>
           </div>
-          <div style="font-weight: bold;">
-            <%= ev.start_time; %> (Pacific time)
-          </div>
-          <div>
-            <%= ev.description %>
-          </div>
-        </div>
-
-      </div>
-
-  <%
-    });
-  %>
-
-</div>
 

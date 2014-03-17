@@ -20,20 +20,26 @@
     </div>
 </div>
 
-<h2>pics</h2>
+          <div class="row">
+            <div class="span7">
+              <h3>band pictures</h2>
 
-<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery"
-    class="modal-gallery-thumbs">
-    <%
-      for (var i = 1, ii = 7; i < ii; i++) {
-    %>
-      <a href="/img/hairstrike_band<%= i %>.jpg" title="hairstrike" data-gallery="gallery"
-          class="modal-gallery-anchor">
-        <img src="/img/hairstrike_band<%= i %>_thumb.jpg" alt=""/>
-      </a>
-    <%
-      }
-    %>
-</div>
-
+              <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery"
+                  class="modal-gallery-thumbs">
+                  <%
+                    for (var i = 1, ii = 7; i < ii; i++) {
+                  %>
+                    <a href="/img/hairstrike_band<%= i %>.jpg" title="hairstrike" data-gallery="gallery"
+                        class="modal-gallery-anchor">
+                      <img src="/img/hairstrike_band<%= i %>_thumb.jpg" alt=""/>
+                    </a>
+                  <%
+                    }
+                  %>
+              </div>
+            </div>
+            <div class="span3">
+              <%- partial('right_sidebar', {quotes: quotes}); %>
+            </div>
+          </div>
 

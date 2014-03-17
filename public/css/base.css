@@ -87,6 +87,10 @@ body {
 }
 
 .nav a:hover {
+  /* color: #fe2929; red */
+  /* color: #f86316; orange */
+  /* color: #f7c411; yellow */
+
   color: #fff;
   text-decoration: underline;
 }
@@ -97,17 +101,21 @@ body {
 }
 
 .content {
-  color: #111111;
+  /* color: #111111; */
+  color: #fff;
+  font-family: Segoe, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
   margin: 12px auto;
   padding: 12px;
   max-width: 1170px;
 }
 
 .content h2 {
-  font-family: 'RedRocketItalic', Verdana, Helvetica;
-  letter-spacing: 1px;
+  font-family: Segoe, Arial, sans-serif;
   font-size: 32px;
-  color: #fff;
+  color: #4f619d;
   margin: 10px 10px 0 10px;
   text-shadow: 0.7px 0.7px 1px #000;
 }
@@ -117,18 +125,13 @@ body {
   letter-spacing: 1px;
   font-size: 24px;
   line-height: inherit;
-  border-bottom: 2px solid #f7c411;
-  color: #fff;
-  margin-left: 8px;
+  border-bottom: 1px solid #4f619d;
+  color: #4f619d;
   text-shadow: 0.7px 0.7px 1px #000;
 }
 
-.content p {
-  margin-left: 8px;
-}
-
 .span10 {
-  background-color: #6f7ca2;
+  /* background-color: #6f7ca2; */
 }
 
 .band-bio-entry {
@@ -156,8 +159,10 @@ body {
 
 .content a {
   color: #f7c411;
-  font-weight: bold;
-  font-style: italic;
+}
+
+.content a:hover {
+  color: #fff;
 }
 
 li {
@@ -242,7 +247,7 @@ li {
 }
 
 .music-section .video-item {
-  width: 568px;
+  width: 100%;
   display :inline-block;
   margin-bottom: 24px;
 }

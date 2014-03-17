@@ -25,6 +25,7 @@ router.get('/schedule').to('Main.schedule');
 router.get('/setlist').to('Main.setlist');
 router.get('/pics').to('Main.pics');
 router.get('/music').to('Main.music');
+router.get('/fans').to('Main.fans');
 router.get('/contact').to('Main.contact');
 
 exports.router = router;

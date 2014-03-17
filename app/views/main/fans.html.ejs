@@ -1,0 +1,18 @@
+          <div class="row">
+            <div class="span7">
+              <h3>from the fans</h2>
+              <div>
+              <% for (var p in allQuotes) { %>
+                <div style="margin-bottom: 16px;">
+                  <div>"<%= allQuotes[p]; %>"</div>
+                  <div style="font-weight: bold;">--<%= p; %></div>
+                </div>
+              <% } %>
+              </div>
+            </div>
+            <div class="span3">
+              <%- partial('right_sidebar', {}); %>
+            </div>
+          </div>
+
+

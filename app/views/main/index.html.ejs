@@ -1,20 +1,13 @@
-          <h3>welcome</h3>
-          <p>
-            Welcome to the home on the Web for Hairstrike: the 80s metal phenomenon.
-          </p>
-          <p>
-            It's music from a simpler time, when women were cool, and men were hot. And guitars had a lot of sustain. That's right: spandex, Aquanet, shredding guitars and shrieking vocals. This is party music, for "nothing but a good time."</a>
-          </p>
-
           <div class="row">
             <div class="span7">
-              <div style="padding: 12px">
+              <h3>welcome</h3>
 
-                <h3>the band</h3>
-
-                <div class="band-pic-banner">
-                  <img src="/img/hairstrike_band_logo.jpg" />
-                </div>
+              <p>
+                Welcome to the home on the Web for Hairstrike: the 80s metal phenomenon.
+              </p>
+              <p>
+                It's music from a simpler time, when women were cool, and men were hot. And guitars had a lot of sustain. That's right: spandex, Aquanet, shredding guitars and shrieking vocals. This is party music, for "nothing but a good time."</a>
+              </p>
 
                 <p class="band-gallery">
                   <a href="/band#jake" >
@@ -31,31 +24,23 @@
                   </a>
                 </p>
 
+                <div class="band-pic-banner">
+                  <img src="/img/hairstrike_band_logo.jpg" />
+                </div>
+
                 <h3>set list</h3>
                 <p>
                   Hairstrike plays all the huge 80s metal hits. If you're curious what they play, you can <a href="/setlist">see the current set list here</a>.
                 </p>
                 <h3>booking</h3>
                 <p>
-                  To book Hairstrike for a live show, or join the mailing list, send an e-mail to <a href="mailto:info@hairstrike.net">info@hairstrike.net</a>.
-                </p>
-                <p class="facebook-button">
-                  <a href="https://www.facebook.com/pages/Hairstrike/539862106054222">
-                    <img src="/img/facebook.png" width="280" height="93"/>
-                  </a>
+                  To book Hairstrike for a live show, contact <a href="http://www.associatedentertainment.com/">Associated Entertainment Consultants</a>,
+                  or e-mail us directly at <a href="mailto:info@hairstrike.net">info@hairstrike.net</a>.
                 </p>
 
-              </div>
             </div>
-            <div class="span3 music-player">
-              <div style="padding: 12px">
-                <h3>music</h3>
-  <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F105782001&amp;color=f7c411&amp;auto_play=false&amp;show_artwork=true"></iframe>
-  <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F105782158&amp;color=f7c411&amp;auto_play=false&amp;show_artwork=true"></iframe>
-                <div style="text-align:right;">
-                  <a href="/music">More ...</a>
-                 </div>
-              </div>
+            <div class="span3">
+              <%- partial('right_sidebar', {quotes: quotes}); %>
             </div>
           </div>
 
