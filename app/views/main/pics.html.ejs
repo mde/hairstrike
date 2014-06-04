@@ -1,3 +1,4 @@
+<%= picList.length %>
 <link rel="stylesheet" href="/css/bootstrap-image-gallery.min.css">
 
 <script src="/js/jquery.min.js"></script>
@@ -27,11 +28,11 @@
               <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery"
                   class="modal-gallery-thumbs">
                   <%
-                    for (var i = 1, ii = 7; i < ii; i++) {
+                    for (var i = 0, ii = picList.length; i < ii; i++) {
                   %>
-                    <a href="/img/hairstrike_band<%= i %>.jpg" title="hairstrike" data-gallery="gallery"
+                    <a href="/img/pics/<%= picList[i] %>" title="hairstrike" data-gallery="gallery"
                         class="modal-gallery-anchor">
-                      <img src="/img/hairstrike_band<%= i %>_thumb.jpg" alt=""/>
+                      <img src="/img/pics/<%= picList[i].replace('.jpg', '_thumb.jpg') %>" alt=""/>
                     </a>
                   <%
                     }

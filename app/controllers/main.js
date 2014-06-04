@@ -15,6 +15,8 @@
  * limitations under the License.
  *
 */
+var fs = require('fs');
+
 
 var NAVS = {
       '/': 'Home'
@@ -41,13 +43,19 @@ var NAVS = {
 , 'Glen D., Belmont, CA': "WOW, its like I was back at The Stone or Keystone Palo Alto all over again. These guys rock. Brought me right back to 1985 \m/"
 
 , 'Martin S., San Francisco, CA': "One of the best cover bands I have seen in a long time. Great vocals and solid musicianship. I look forward to catching them again soon."
-    };
+    }
+  , PIC_LIST = fs.readdirSync('./public/img/pics').filter(function (item) {
+      return /\.jpg$/.test(item) && !/_thumb\.jpg$/.test(item);
+    });
+
+PIC_LIST.sort();
 
 var Main = function () {
   var self = this
     , navArray = Object.keys(NAVS);
 
   this.navs = NAVS;
+  this.picList = PIC_LIST;
 
   navArray.forEach(function (item) {
     var action = item.replace('/', '');
@@ -58,7 +66,6 @@ var Main = function () {
     }
 
     self[action] = function (req, resp, params) {
-      console.dir(this.quotes);
       self.respond(params, {
         format: 'html'
       , template: 'app/views/main/' + action
