@@ -229,8 +229,8 @@ li {
 .modal-gallery-anchor {
   position: relative;
   overflow: hidden;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   display: inline-block;
   background-color: #000;
   line-height: 200px;
