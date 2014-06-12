@@ -1,7 +1,11 @@
 
 
+task('cleanThumbs', {async: true}, function () {
+  jake.exec('rm -rf ./public/img/pics/*_thumb.jpg', complete);
+});
+
 desc('Generates thumbnails for pics in the pics/ directory');
-task('thumb', {async: true}, function () {
+task('thumb', ['cleanThumbs'], {async: true}, function () {
   var thumb = require('node-thumbnail').thumb;
   thumb({
     source: './public/img/pics',
