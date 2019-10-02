@@ -20,12 +20,12 @@
 var router = new geddy.RegExpRouter();
 
 router.get('/').to('Main.index');
-router.get('/band').to('Main.band');
-router.get('/schedule').to('Main.schedule');
-router.get('/setlist').to('Main.setlist');
-router.get('/pics').to('Main.pics');
-router.get('/music').to('Main.music');
-router.get('/fans').to('Main.fans');
-router.get('/contact').to('Main.contact');
+router.get('/band.html').to('Main.band');
+router.get('/schedule.html').to('Main.schedule');
+router.get('/setlist.html').to('Main.setlist');
+router.get('/pics.html').to('Main.pics');
+router.get('/music.html').to('Main.music');
+router.get('/fans.html').to('Main.fans');
+router.get('/contact.html').to('Main.contact');
 
 exports.router = router;

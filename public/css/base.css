@@ -172,13 +172,14 @@ li {
 .band-gallery {
   width: 100%;
   overflow: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .band-gallery img {
   width: 150px;
   height: 200px;
-  margin: 10px 10px 0 0;
-  float: left;
+  margin: 10px 30px 10px 30px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;

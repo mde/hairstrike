@@ -20,13 +20,11 @@ var fs = require('fs');
 
 var NAVS = {
       '/': 'Home'
-    , '/band': 'The Band'
-    , '/pics': 'Pics'
-    , '/music': 'Music'
-    , '/schedule': 'Schedule'
-    , '/setlist': 'Set List'
-    , '/fans': 'Fans'
-    , '/contact': 'Contact'
+    , '/band.html': 'The Band'
+    , '/music.html': 'Music'
+    , '/setlist.html': 'Set List'
+    , '/fans.html': 'Fans'
+    , '/contact.html': 'Contact'
     }
   , EVENTS_URL = 'https://graph.facebook.com/539862106054222/events?fields=id,name,description,picture&access_token=2418803385|lvofYVRMdQf9Vz7cj-WIWipWwqM'
   , QUOTES = {
@@ -58,7 +56,7 @@ var Main = function () {
   this.picList = PIC_LIST;
 
   navArray.forEach(function (item) {
-    var action = item.replace('/', '');
+    var action = item.replace('/', '').replace('.html', '');
     action = action || 'index';
 
     if (action == 'schedule') {
