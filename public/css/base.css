@@ -74,7 +74,7 @@ body {
 
 .nav li {
   margin: 0;
-  padding: 0 16px;
+  padding: 8px 16px;
   display: inline-block;
   font-family: 'RedRocketItalic', Verdana, Helvetica;
   font-size: 18px;
@@ -173,13 +173,13 @@ li {
   width: 100%;
   overflow: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .band-gallery img {
-  width: 150px;
-  height: 200px;
-  margin: 10px 30px 10px 30px;
+  width: 140px;
+  margin: 10px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
