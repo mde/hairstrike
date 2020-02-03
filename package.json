@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "geddy": "^14.0.1",
+    "jake": "^10.4.5",
     "node-thumbnail": "^0.4.0"
   }
 }
